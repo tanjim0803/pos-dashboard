@@ -1,0 +1,26 @@
+// ==========================================================================
+// Chart chrome
+// ==========================================================================
+//
+// Charts are Chart.js <canvas> elements, so axis labels, gridlines, legends
+// and tooltips are painted, not styled here. Their colours and font come from
+// the preset in scripts/utils/charts.js, which reads the same tokens the rest
+// of the UI uses (--ink-*, --surface-panel, --bs-border-color) and re-reads
+// them whenever the colour mode changes. Series colours come from
+// scripts/utils/chart-palette.js.
+//
+// All that is left for CSS is the box: `createChart()` appends a fixed-height
+// wrapper that Chart.js observes, so the canvas follows the container's width
+// (window resize, sidebar toggle) without overflowing it.
+//
+// ==========================================================================
+
+.chart-canvas-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+
+  > canvas {
+    display: block;
+  }
+}
