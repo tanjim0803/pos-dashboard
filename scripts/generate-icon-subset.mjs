@@ -1,6 +1,6 @@
 // scripts/generate-icon-subset.mjs
 //
-// Regenerates src-modern/styles/scss/components/_bootstrap-icons-subset.scss.
+// Regenerates src/styles/scss/components/_bootstrap-icons-subset.scss.
 //
 // Bootstrap Icons ships ~2,000 glyphs; this template uses a fraction of them, so
 // the build emits CSS for only the ones actually referenced. The catch is that
@@ -22,7 +22,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const SRC = path.join(ROOT, 'src-modern');
+const SRC = path.join(ROOT, 'src');
 const OUT = path.join(SRC, 'styles/scss/components/_bootstrap-icons-subset.scss');
 const MAP = path.join(ROOT, 'node_modules/bootstrap-icons/font/bootstrap-icons.json');
 
