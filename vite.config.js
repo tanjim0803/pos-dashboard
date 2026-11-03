@@ -7,7 +7,7 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
-  root: 'src-modern',
+  root: 'src',
   publicDir: '../public-assets',
   base: './',
 
@@ -24,7 +24,7 @@ export default defineConfig({
 
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src-modern/index.html'),
+        main: resolve(__dirname, 'src/index.html'),
       },
 
       output: {
@@ -80,7 +80,7 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src-modern'),
+      '@': resolve(__dirname, 'src'),
       '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
       '~bootstrap-icons': resolve(__dirname, 'node_modules/bootstrap-icons'),
     },

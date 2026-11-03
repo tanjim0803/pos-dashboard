@@ -8,7 +8,7 @@ Modern Bootstrap 5 Admin Dashboard Template (v3.7.0) using Vite, Alpine.js, Char
 
 | Directory | Purpose |
 |-----------|---------|
-| `src-modern/` | Source files (Bootstrap 5.3.8, ES6+ modules) |
+| `src/` | Source files (Bootstrap 5.3.8, ES6+ modules) |
 | `dist-modern/` | Production build output |
 | `src/`, `dist/` | Legacy Bootstrap 3 code - **do not use** |
 
@@ -42,22 +42,22 @@ There is no per-page filter — both test scripts always run the whole suite.
 
 | File | Purpose |
 |------|---------|
-| `src-modern/scripts/main.js` | App entry point, initializes AdminApp class |
-| `src-modern/styles/scss/main.scss` | SCSS entry point |
+| `src/scripts/main.js` | App entry point, initializes AdminApp class |
+| `src/styles/scss/main.scss` | SCSS entry point |
 | `vite.config.js` | Build config with multi-page entries |
 | `eslint.config.js` | ESLint v10 flat config |
-| `src-modern/scripts/utils/search-component.js` | Factory for the navbar search Alpine component |
-| `src-modern/scripts/utils/constants.js` | Shared timing/breakpoint constants |
-| `src-modern/scripts/utils/charts.js` | Chart.js preset — registers only the chart types used, themes `Chart.defaults` from CSS tokens, re-themes live charts on light/dark switch, `createChart()` helper |
-| `src-modern/scripts/utils/prism.js` | Bundled syntax highlighting for the element showcase pages |
+| `src/scripts/utils/search-component.js` | Factory for the navbar search Alpine component |
+| `src/scripts/utils/constants.js` | Shared timing/breakpoint constants |
+| `src/scripts/utils/charts.js` | Chart.js preset — registers only the chart types used, themes `Chart.defaults` from CSS tokens, re-themes live charts on light/dark switch, `createChart()` helper |
+| `src/scripts/utils/prism.js` | Bundled syntax highlighting for the element showcase pages |
 | `scripts/smoke-test.mjs` | Loads all 30 built pages in a browser; fails on errors or external requests |
-| `src-modern/styles/scss/components/_a11y.scss` | Skip-link, reduced-motion, sr-only helpers |
-| `src-modern/styles/scss/components/_bootstrap-icons-subset.scss` | **Generated** icon CSS — run `npm run icons`, never hand-edit |
+| `src/styles/scss/components/_a11y.scss` | Skip-link, reduced-motion, sr-only helpers |
+| `src/styles/scss/components/_bootstrap-icons-subset.scss` | **Generated** icon CSS — run `npm run icons`, never hand-edit |
 | `scripts/generate-icon-subset.mjs` | Regenerates the icon subset by scanning source for `bi-*` |
-| `src-modern/scripts/auth.js` | Entry point for the 9 standalone pages (auth + errors) |
-| `src-modern/scripts/components/auth.js` | Alpine scopes for the auth forms |
-| `src-modern/scripts/utils/chart-palette.js` | Single source for every chart colour — validated, theme-aware |
-| `src-modern/scripts/utils/password-strength.js` | Shared password scorer (auth pages + forms showcase) |
+| `src/scripts/auth.js` | Entry point for the 9 standalone pages (auth + errors) |
+| `src/scripts/components/auth.js` | Alpine scopes for the auth forms |
+| `src/scripts/utils/chart-palette.js` | Single source for every chart colour — validated, theme-aware |
+| `src/scripts/utils/password-strength.js` | Shared password scorer (auth pages + forms showcase) |
 | `scripts/auth-interaction-test.mjs` | Drives the auth flows in a browser; the smoke test can't see stuck widgets |
 
 ## Architecture Quick Reference
@@ -83,11 +83,11 @@ Alpine.data('componentName', () => ({
 
 ## Adding a New Page
 
-1. Create `src-modern/newpage.html` with `data-page="newpage"` on body
+1. Create `src/newpage.html` with `data-page="newpage"` on body
 2. Add entry to `vite.config.js` → `rollupOptions.input`
-3. Create `src-modern/scripts/components/newpage.js`
+3. Create `src/scripts/components/newpage.js`
 4. Add case to `initPageComponents()` in `main.js`
-5. Optional: Create `src-modern/styles/scss/pages/_newpage.scss` and import in `main.scss`
+5. Optional: Create `src/styles/scss/pages/_newpage.scss` and import in `main.scss`
 
 ## Dependencies
 

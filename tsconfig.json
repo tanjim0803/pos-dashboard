@@ -16,9 +16,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@/*": ["./src-modern/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["src-modern", "src-modern/**/*.ts", "src-modern/**/*.tsx"],
+  "include": ["src", "src/**/*.ts", "src/**/*.tsx"],
   "references": []
 }
