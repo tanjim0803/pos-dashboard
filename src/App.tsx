@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './layouts/AdminLayout';
+import DashboardPage from './pages/DashboardPage';
 
 function Page({ title }: { title: string }) {
   return (
@@ -32,7 +33,7 @@ export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route index element={<Page title="Dashboard" />} />
+        <Route index element={<DashboardPage />} />
         {pages.map(([slug, title]) => (
           <Route key={slug} path={slug} element={<Page title={title} />} />
         ))}

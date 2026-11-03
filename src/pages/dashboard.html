@@ -1,0 +1,259 @@
+            <div class="container-fluid p-4 p-lg-4">
+                <!-- Page Header -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
+                    <div>
+                        <h1 class="h3 mb-0">Dashboard</h1>
+                        <p class="text-muted mb-0">Last 30 days &middot; updated 5 minutes ago</p>
+                    </div>
+                    <div class="d-flex gap-2 flex-shrink-0">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newItemModal" aria-label="New Item">
+                            <i class="bi bi-plus-lg me-2" aria-hidden="true"></i>
+                            <span class="d-none d-sm-inline">New Item</span>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Export">
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                            <span class="d-none d-sm-inline ms-2">Export</span>
+                        </button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-filter me-1" aria-hidden="true"></i>Filter
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">All Time</a></li>
+                                <li><a class="dropdown-item active" href="#">Last 30 Days</a></li>
+                                <li><a class="dropdown-item" href="#">Last 90 Days</a></li>
+                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KPI Cards -->
+                <section class="mb-4" aria-label="Key Performance Indicators">
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6 col-xl-3">
+                            <div class="card metric-card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <div class="text-muted text-uppercase small fw-semibold mb-1">Total Revenue</div>
+                                            <div class="h2 mb-0 fw-bold">$45,231</div>
+                                        </div>
+                                        <div class="card-icon-wrapper bg-primary-subtle rounded-3 p-2" aria-hidden="true">
+                                            <i class="bi bi-currency-dollar text-primary fs-4" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-success-subtle text-success me-2">
+                                            <i class="bi bi-arrow-up-right me-1" aria-hidden="true"></i>12.5%
+                                        </span>
+                                        <small class="text-muted">vs last month</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-3">
+                            <div class="card metric-card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <div class="text-muted text-uppercase small fw-semibold mb-1">Total Users</div>
+                                            <div class="h2 mb-0 fw-bold">2,345</div>
+                                        </div>
+                                        <div class="card-icon-wrapper bg-info-subtle rounded-3 p-2" aria-hidden="true">
+                                            <i class="bi bi-people text-info fs-4" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-success-subtle text-success me-2">
+                                            <i class="bi bi-arrow-up-right me-1" aria-hidden="true"></i>8.2%
+                                        </span>
+                                        <small class="text-muted">vs last month</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-3">
+                            <div class="card metric-card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <div class="text-muted text-uppercase small fw-semibold mb-1">Orders</div>
+                                            <div class="h2 mb-0 fw-bold">1,234</div>
+                                        </div>
+                                        <div class="card-icon-wrapper bg-warning-subtle rounded-3 p-2" aria-hidden="true">
+                                            <i class="bi bi-cart text-warning fs-4" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-danger-subtle text-danger me-2">
+                                            <i class="bi bi-arrow-down-right me-1" aria-hidden="true"></i>3.1%
+                                        </span>
+                                        <small class="text-muted">vs last month</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-3">
+                            <div class="card metric-card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <div class="text-muted text-uppercase small fw-semibold mb-1">Growth Rate</div>
+                                            <div class="h2 mb-0 fw-bold">18.6%</div>
+                                        </div>
+                                        <div class="card-icon-wrapper bg-success-subtle rounded-3 p-2" aria-hidden="true">
+                                            <i class="bi bi-graph-up text-success fs-4" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-success-subtle text-success me-2">
+                                            <i class="bi bi-arrow-up-right me-1" aria-hidden="true"></i>2.3%
+                                        </span>
+                                        <small class="text-muted">vs last month</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Charts Row -->
+                <section class="mb-4" aria-label="Charts and Analytics">
+                    <div class="row g-4">
+                        <div class="col-12 col-lg-8">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h2 class="h5 card-title mb-0">Revenue Overview</h2>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-outline-secondary active">7D</button>
+                                        <button type="button" class="btn btn-outline-secondary">1M</button>
+                                        <button type="button" class="btn btn-outline-secondary">3M</button>
+                                        <button type="button" class="btn btn-outline-secondary">1Y</button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div id="revenueChart" style="min-height: 350px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header">
+                                    <h2 class="h5 card-title mb-0">Quick Actions</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-outline-primary text-start">
+                                            <i class="bi bi-plus-circle me-2" aria-hidden="true"></i>Create New Project
+                                        </button>
+                                        <button type="button" class="btn btn-outline-primary text-start">
+                                            <i class="bi bi-person-plus me-2" aria-hidden="true"></i>Add New User
+                                        </button>
+                                        <button type="button" class="btn btn-outline-primary text-start">
+                                            <i class="bi bi-file-earmark-text me-2" aria-hidden="true"></i>Generate Report
+                                        </button>
+                                        <button type="button" class="btn btn-outline-primary text-start">
+                                            <i class="bi bi-credit-card me-2" aria-hidden="true"></i>Process Payment
+                                        </button>
+                                        <button type="button" class="btn btn-outline-primary text-start">
+                                            <i class="bi bi-gear me-2" aria-hidden="true"></i>System Settings
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Third Row: Traffic Sources & Storage -->
+                <section class="mb-4" aria-label="Additional Analytics">
+                    <div class="row g-4">
+                        <div class="col-12 col-lg-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header">
+                                    <h2 class="h5 card-title mb-0">Traffic Sources</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div id="trafficSourcesChart" style="min-height: 300px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header">
+                                    <h2 class="h5 card-title mb-0">Recent Activity</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="list-group list-group-flush">
+                                        <div class="list-group-item border-0 px-0">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <div class="bg-primary rounded-circle p-2">
+                                                        <i class="bi bi-person-plus text-white" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <div class="fw-semibold">New user registered</div>
+                                                    <small class="text-muted">John Doe joined • 2 mins ago</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item border-0 px-0">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <div class="bg-success rounded-circle p-2">
+                                                        <i class="bi bi-check text-white" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <div class="fw-semibold">Payment processed</div>
+                                                    <small class="text-muted">$299 • 15 mins ago</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="bg-warning rounded-circle p-2">
+                                                    <i class="bi bi-exclamation-triangle text-white" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <div class="fw-semibold">System alert</div>
+                                                <small class="text-muted">High server load • 1 hour ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header">
+                                    <h2 class="h5 card-title mb-0">Storage Status</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div id="storageStatusChart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sales by Location -->
+                <section class="mb-4" aria-label="Location analytics">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2 class="h5 card-title mb-0">Sales by Location</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div id="salesByLocationChart" style="min-height: 400px; width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
